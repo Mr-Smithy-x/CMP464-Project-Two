@@ -8,9 +8,11 @@ export class VideoRowComponent extends Component {
     }
 
     render() {
+        const {onVideoClicked, videos } = this.props;
+
         return (
             <div className="thumbnails row" meta="cultura">
-                {this.props.videos.map((video, idx) => (<VideoComponent key={idx} onVideoComponentClicked={this.props.onVideoClicked} video={video}/>))}
+                {videos.map((video, idx) => (<VideoComponent key={idx} onVideoComponentClicked={onVideoClicked} video={video}/>))}
             </div>
         )
     }
